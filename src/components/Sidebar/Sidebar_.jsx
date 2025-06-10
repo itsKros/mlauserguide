@@ -16,16 +16,32 @@ const navData = [
     icon: House,
   },
   {
+    label: "Introduction",
+    path: "/introduction",
+    icon: LayoutDashboard,
+    sub: [
+      { label: "Glimpse", path: "/introduction/glimpse" },
+      { label: "Prerequisite", path: "/introduction/prerequisite" },
+    ],
+  },
+  {
     label: "Getting Started",
     path: "/getting-started",
     icon: TerminalSquare,
     sub: [
-      { label: "Introduction to Mini Lessons Academy", path: "/getting-started/introduction-to-mini-lessons-academy" },
-      { label: "Onboarding", path: "/getting-started/onboarding" },
-      { label: "Dashboard Overview", path: "/getting-started/dashboard-overview" },      
+      { label: "Resources", path: "/getting-started/resources" },
+      { label: "Install", path: "/getting-started/install" },
     ],
   },
-  
+  {
+    label: "Configuration",
+    path: "/configuration",
+    icon: Settings,
+    sub: [
+      { label: "System Settings", path: "/configuration/system-settings" },
+      { label: "Launch", path: "/configuration/launch" },
+    ],
+  },
 ];
 
 export default function Sidebar({ collapsed, setCollapsed, isMobile }) {
@@ -74,10 +90,7 @@ export default function Sidebar({ collapsed, setCollapsed, isMobile }) {
               <div key={label}>
                 <NavLink
                   to={path}
-                  onClick={() => {
-                    if (sub) toggleSection(label);
-                    if (isMobile) setCollapsed(true);
-                  }}
+                  onClick={() => toggleSection(label)}
                   className={({ isActive }) =>
                     `flex items-center gap-2 my-2 px-3 py-2 rounded ${
                       isActive
@@ -90,7 +103,7 @@ export default function Sidebar({ collapsed, setCollapsed, isMobile }) {
                   <span>{label}</span>
                 </NavLink>
 
-                {openSection === label && sub && (
+                {openSection === label && (
                   <div className="pl-6">
                     {sub.map(({ label, path }) => (
                       <NavLink

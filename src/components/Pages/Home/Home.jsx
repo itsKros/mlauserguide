@@ -1,22 +1,86 @@
 import React from 'react'
-import { BookOpen, Settings, Rocket } from 'lucide-react';
+import {
+  BookOpen,
+  Rocket,
+  Layers,
+  Book,
+  Headphones,
+  Bot,
+  Image,
+  Mail,
+  Server,
+  Settings,
+  Star,
+  HelpCircle,
+} from 'lucide-react';
 
 function Home() {
     const features = [
         {
-          icon: BookOpen,
-          title: 'Intro',
-          description: 'Step-by-step guides to get you up and running quickly.',
+          icon: Rocket,
+          title: 'Getting Started',
+          description: 'Quickly set up your account and navigate the platform with ease.',
+          url: '/getting-started'
+        },
+        {
+          icon: Layers,
+          title: 'Course Creation',
+          description: 'Build engaging, multimedia-rich courses from scratch or in one click.',
+          url: '#',
+        },
+        {
+          icon: Book,
+          title: 'Book Creation',
+          description: 'Create interactive digital books using intuitive tools and templates.',
+          url: '#',
+        },
+        {
+          icon: Headphones,
+          title: 'Audiobook Creation',
+          description: 'Convert your written content into professional-quality audiobooks.',
+          url: '#',
+        },
+        {
+          icon: Bot,
+          title: 'Andy AI',
+          description: 'Leverage Andy AI for smart content suggestions and fast content generation.',
+          url: '#',
+        },
+        {
+          icon: Image,
+          title: 'Quiz & Media Management',
+          description: 'Easily manage quizzes, images, and other media assets for your content.',
+          url: '#',
+        },
+        {
+          icon: Mail,
+          title: 'Email Marketing',
+          description: 'Design, export, and optimize email campaigns to reach your audience effectively.',
+          url: '#',
+        },
+        {
+          icon: Server,
+          title: 'Course Hosting',
+          description: 'Host and share your courses seamlessly, with embedding and monetization options.',
+          url: '#',
         },
         {
           icon: Settings,
-          title: 'Prerequisite',
-          description: 'Totam, explicabo libero recusandae laudantium voluptatem',
+          title: 'Administrative',
+          description: 'Manage your subscription, account settings, and personal profile.',
+          url: '#',
         },
         {
-            icon: Rocket,
-            title: 'Prerequisite',
-            description: 'Totam, explicabo libero recusandae laudantium voluptatem',
+          icon: Star,
+          title: 'Customer Spotlight',
+          description: 'Get featured and increase visibility by sharing your success story.',
+          url: '#',
+        },
+        {
+          icon: HelpCircle,
+          title: 'Support & Resources',
+          description: 'Find help, book calls, or request custom solutions whenever you need support.',
+          url: '#',
         }
         
       ];
@@ -30,7 +94,7 @@ function Home() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi aperiam ipsa officia assumenda perspiciatis laboriosam quisquam. Alias deleniti maxime a ipsum, maiores beatae aperiam natus repellat quod ad fugiat debitis soluta nesciunt, eum similique labore mollitia consequuntur quidem, non doloribus recusandae! Mollitia autem molestiae et nostrum, odio sapiente deserunt quaerat totam laboriosam, facere iusto corrupti molestias illum in reiciendis.
             </p>
     
-            <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+            <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
     
             <p className="text-md font-bold text-[#7b1fa2]">        
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -39,7 +103,7 @@ function Home() {
     
             <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((item, idx) => (
-                <div
+                <a href={item.url}
                   key={idx}
                   className="bg-white border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition group"
                 >
@@ -48,7 +112,7 @@ function Home() {
                     <h3 className="text-lg font-semibold text-[#7b1fa2]">{item.title}</h3>
                   </div>
                   <p className="text-gray-600 text-sm">{item.description}</p>
-                </div>
+                </a>
               ))}
             </section>
           </div>

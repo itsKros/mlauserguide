@@ -3,16 +3,21 @@ import { BookOpen, Settings, Rocket } from 'lucide-react';
 
 function GettingStarted() {
   const features = [
-    {
-      icon: BookOpen,
-      title: 'Install',
-      description: 'Step-by-step guides to get you up and running quickly.',
+    {      
+      title: 'Introduction',
+      url: '/getting-started/introduction-to-mini-lessons-academy'      
     },
-    {
-      icon: Settings,
-      title: 'Resources',
-      description: 'Totam, explicabo libero recusandae laudantium voluptatem',
+    {     
+      title: 'Onboarding',
+      url: '/getting-started/onboarding'
+      
+    },
+    {      
+      title: 'Dashboard Overview',
+      url: '/getting-started/dashboard-overview'
     }
+
+    
     
   ];
   return (
@@ -29,21 +34,23 @@ function GettingStarted() {
         <p className="text-md font-bold text-[#7b1fa2]">        
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
+
+        
         
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-white border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition group"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <item.icon className="text-[#7b1fa2] w-6 h-6 group-hover:scale-110 transition" />
-                <h3 className="text-lg font-semibold text-[#7b1fa2]">{item.title}</h3>
-              </div>
-              <p className="text-gray-600 text-sm">{item.description}</p>
-            </div>
-          ))}
+          
         </section>
+
+
+        <ul className="list-none space-y-4 pl-4 border-l-2 border-[#7b1fa2]">
+            {features.map((item, index) => (
+                <li key={index} className="pl-4">
+                  <h3 className="text-md font-semibold text-[#7b1fa2]">
+                    <a href={item.url}>{item.title}</a>
+                  </h3>               
+                </li>
+            ))}
+        </ul>
 
         
       </div>
