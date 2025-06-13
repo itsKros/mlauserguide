@@ -11,7 +11,7 @@ function DashboardOverview() {
             </p>
 
             <div className="flex justify-start py-6">
-                <img src="/imgs/getting-started/dashboard/dashboard.png" alt="Description" className="w-2/5 h-auto" />
+                <img src="/imgs/getting-started/dashboard/dashboard.png" alt="Description" className="w-full md:w-3/5 h-auto p-6 shadow-sm rounded-md" />
             </div> 
         
             <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
@@ -72,7 +72,7 @@ function DashboardOverview() {
                 <li className="pl-4">                
                     <h3 className="text-md font-semibold text-[#7b1fa2]">AI Coach (Andy)</h3>
                     <div className="flex justify-start py-6">
-                        <img src="/imgs/getting-started/dashboard/andy_ai.png" alt="Description" className="w-2/5 h-auto" />
+                        <img src="/imgs/getting-started/dashboard/andy_ai.png" alt="Description" className="w-full md:w-3/5 h-auto p-6 shadow-sm rounded-md" />
                     </div> 
                     <p className="text-sm text-gray-700">
                         Andy is your personal AI-powered assistant designed to accelerate your content creation process. Generate tailored headlines, blog posts, sales copy, product research, keyword research, and more in seconds. Use Andy when you need a first draft fast or a fresh angle.
@@ -119,7 +119,6 @@ function DashboardOverview() {
                     </li>
                     <li>
                         <span className="font-semibold">Use the "Create" button</span> often. We're always adding new, valuable content types and features.
-
                     </li>
                     <li>
                         <span className="font-semibold">Stay updated</span> by reading our email newsletter for timely information, updates, and exclusive best practices.
@@ -136,7 +135,7 @@ function DashboardOverview() {
             </p>   
 
             <div className="flex justify-left py-6">
-                <img src="/imgs/getting-started/dashboard/create-new-content.png" alt="Description" className="w-4/5 h-auto" />
+                <img src="/imgs/getting-started/dashboard/create-new-content.png" alt="Description" className="w-full md:w-full h-auto p-6 shadow-sm rounded-md" />
             </div>  
         
         </div>

@@ -2,11 +2,19 @@ import React, { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import {
   ChevronLeft,
-  ChevronRight,
-  LayoutDashboard,
-  Settings,
-  TerminalSquare,
+  ChevronRight,    
   House,
+  Rocket,  
+  Layers,
+  Book,
+  Headphones,
+  Bot,
+  Image,
+  Mail,
+  Server,
+  Settings,
+  Star,
+  HelpCircle,
 } from "lucide-react";
 
 const navData = [
@@ -18,13 +26,34 @@ const navData = [
   {
     label: "Getting Started",
     path: "/getting-started",
-    icon: TerminalSquare,
+    icon: Rocket,
     sub: [
       { label: "Introduction to Mini Lessons Academy", path: "/getting-started/introduction-to-mini-lessons-academy" },
       { label: "Onboarding", path: "/getting-started/onboarding" },
       { label: "Dashboard Overview", path: "/getting-started/dashboard-overview" },      
     ],
   },
+  {
+    label: "Andy AI",
+    path: "/andy-ai",
+    icon: Bot,    
+  },
+  {
+    label: "Quiz & Media Management",
+    path: "/quiz-and-media-management",
+    icon: Image,    
+  },
+  {
+    label: "Email Marketing",
+    path: "/email-marketing",
+    icon: Mail,    
+  },
+  {
+    label: "Course Hosting",
+    path: "/course-hosting",
+    icon: Server,    
+  },
+  
   
 ];
 

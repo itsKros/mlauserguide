@@ -11,6 +11,13 @@ import DashboardOverview from './components/Pages/GettingStarted/DashboardOvervi
 
 import AndyAI from './components/Pages/AndyAI/AndyAI.jsx';
 
+import QuizMedia from './components/Pages/QuizMedia/QuizMedia.jsx';
+
+import EmailMarketing from './components/Pages/EmailMarketing/EmailMarketing.jsx';
+import CourseHosting from './components/Pages/CourseHosting/CourseHosting.jsx';
+
+
+
 
 export default function App() {
   return (
@@ -25,6 +32,14 @@ export default function App() {
           <Route path="getting-started/onboarding" element={<Onboarding />} />
           <Route path="getting-started/dashboard-overview" element={<DashboardOverview />} />
 
+        <Route path="andy-ai" element={<AndyAI />} />
+
+        <Route path="quiz-and-media-management" element={<QuizMedia />} />
+
+        <Route path="email-marketing" element={<EmailMarketing />} />
+
+        <Route path="course-hosting" element={<CourseHosting />} />
+        
       </Route>
     </Routes>
   );

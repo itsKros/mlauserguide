@@ -44,7 +44,7 @@ function Home() {
           icon: Bot,
           title: 'Andy AI',
           description: 'Leverage Andy AI for smart content suggestions and fast content generation.',
-          url: '#',
+          url: '/andy-ai',
         },
         {
           icon: Image,

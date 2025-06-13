@@ -63,7 +63,7 @@ function Onboarding() {
 
 
         <div className="flex justify-center py-6">
-            <img src="/imgs/getting-started/onboarding/onboarding.png" alt="Description" className="w-2/5 h-auto" />
+            <img src="/imgs/getting-started/onboarding/onboarding.png" alt="Description" className="w-full md:w-2/5 h-auto p-6 shadow-sm rounded-md" />
         </div>  
         
       </div>
