@@ -14,114 +14,81 @@ function CourseHosting() {
             <h2 className="text-2xl font-bold text-[#7b1fa2]">Hosting Your Courses</h2>
             <p className="text-gray-700">Mini Lessons offers simple but powerful tools to control how your course content is accessed:</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {/* ------------------------------------------------------------------ */}
-            
-            <h2 className="text-2xl font-bold text-[#7b1fa2]">Creating Email Campaigns</h2>
-            <p>Quickly generate engaging email sequences to promote your courses or books:</p>
-            <div className="flex justify-start py-6">
-                <img src="/imgs/email-marketing/em-1.png" alt="Description" className="w-full md:w-3/5 h-auto p-6 shadow-sm rounded-md" />
-            </div> 
-
-            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+            <h2 className="text-xl font-bold text-[#7b1fa2]">Public vs. Private Visibility</h2>
+            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">            
                 <li>
-                    <span className="font-semibold">Navigate to Your Course or Book Dashboard:</span> Click <span className="font-semibold">"Email Campaign"</span> to Start.
-                </li>
-                
-                <li>
-                    <span className="font-semibold">Generate Campaign:</span> Mini Lessons automatically creates a multi-email sequence, customized for your specific content.
-                </li>
-                <li>
-                    <span className="font-semibold">Review & Select Emails:</span> 
-                    <ul className="list-disc pl-5 space-y-1 mt-1">
-                    <li>Your campaign includes up to 8 professionally-crafted emails to choose from.</li>
-                        <li>
-                            Each Email Has:
-                            <ul className="list-disc pl-5 space-y-1 mt-1">
-                            <li>
-                                <span className="font-semibold">Goal:</span> Clearly states the email's purpose (e.g., introduce, engage, convert).
-                            </li>
-                            <li>
-                                <span className="font-semibold">Subject Line:</span> Attention-grabbing and optimized for high open rates.
-                            </li>
-                            <li>
-                                <span className="font-semibold">Body Content:</span> Compelling, personalized, and designed to encourage clicks and conversions.
-                            </li>
-                            </ul>
-                        </li>
+                <h3 className="font-semibold">Easily transfer your generated content into external programs:</h3>                     
+                    <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+                        <li><span className="font-semibold">Public:</span> Anyone with the link can view your course instantly. Ideal for wide reach and marketing.</li>
+                        <li><span className="font-semibold">Private:</span> Limit access strictly to authorized individuals, ensuring controlled and secure content distribution.</li>
                     </ul>
-                </li>                    
+                </li>  
             </ul>
 
+            <h2 className="text-xl font-bold text-[#7b1fa2]">Whitelisting (Coming Soon!)</h2>
+            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">            
+                <li>Keep your courses private while giving access to specific individuals by email.</li>              
+                <li>Perfect for exclusive content, premium subscribers, or specific groups.</li>  
+            </ul>
             <div className="flex justify-start py-6">
-                <img src="/imgs/email-marketing/em-2.png" alt="Description" className="w-full md:w-3/5 h-auto p-6 shadow-sm rounded-md" />
-            </div> 
+                <img src="/imgs/course-hosting/ch-1.png" alt="Description" className="w-full md:w-3/5 h-auto p-6 shadow-sm rounded-md" />
+            </div>
+            <div className="flex justify-start py-6">
+                <img src="/imgs/course-hosting/ch-2.png" alt="Description" className="w-full md:w-3/5 h-auto p-6 shadow-sm rounded-md" />
+            </div>
 
+            <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
 
-            <h2 className="text-2xl font-bold text-[#7b1fa2]">Exporting Emails</h2>
-            <p>Easily transfer emails to your favorite email marketing software or email client:</p>
+            <h2 className="text-2xl font-bold text-[#7b1fa2]">Embedding Courses on Your Website</h2>
+            <p className="text-gray-700">Mini Lessons allows you to seamlessly embed your courses directly onto your own website, expanding your audience reach:</p>
+
+            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">            
+                <li>Navigate to your course’s "Content Sharing & Embedding" section.</li>              
+                <li>Copy the provided <span className="font-semibold">iframe embed code.</span></li>  
+                <li>Simply paste this code into your website's HTML or CMS platform (like WordPress, Wix, Squarespace, etc.).</li>
+                <li>Your audience can now interact with your course directly on your own website!</li>
+            </ul>
+            <div className="flex justify-start py-6">
+                <img src="/imgs/course-hosting/ch-3.png" alt="Description" className="w-full md:w-3/5 h-auto p-6 shadow-sm rounded-md" />
+            </div>
+
+            <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
             
-
+            <h2 className="text-2xl font-bold text-[#7b1fa2]">Monetization & Payment Integration (Coming Soon – Currently Hidden)</h2>
+            <p className="text-gray-700">Monetizing your courses through Mini Lessons is straightforward and flexible:</p>
             <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
                 <li>
-                    Click the <span className="font-semibold">copy button</span> next to the subject or body of any email to quickly copy and paste your content into any external program (MailChimp, ActiveCampaign, Gmail, etc.).
+                    <span className="font-semibold">Stripe Integration:</span> Connect your existing Stripe account to Mini Lessons.
+                    <ul className="list-disc pl-5 space-y-1 mt-1">
+                        <li>Generate secure, embedded buy buttons directly linked to your Stripe account.</li>
+                        <li>Accept direct payments and immediately track sales through Stripe’s robust analytics.</li>
+                    </ul>
                 </li>
                 <li>
-                    If you wish to make quick changes or regenerate content, simply adjust your preferences and Mini Lessons will immediately provide new, refreshed emails.
-                </li>                    
-            </ul>
-
-            <div className="flex justify-start py-6">
-                <img src="/imgs/email-marketing/em-3.png" alt="Description" className="w-2/5 md:w-1/5 h-auto p-6 shadow-sm rounded-md" />
-            </div> 
-
-
-            <h2 className="text-2xl font-bold text-[#7b1fa2]">Best Practices for Email Marketing</h2>
-            <p>Easily transfer emails to your favorite email marketing software or email client:</p>
-            
-
-            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
-                <li>
-                    <span className="font-semibold">Consistency:</span> Send emails regularly to maintain audience engagement and build trust.
-                </li>
-                <li>
-                    <span className="font-semibold">Clear CTA:</span> Always include a clear and compelling call-to-action, encouraging readers to enroll, learn more, or take the next step.
-                </li>
-                <li>
-                    <span className="font-semibold">Personalization:</span> Customize emails using recipients' names or relevant details whenever possible for improved engagement.
-                </li>
-                <li>
-                    <span className="font-semibold">Mobile Optimization:</span> Ensure your emails look great on all devices. Mini Lessons generated emails are formatted to be responsive and mobile-friendly by default.
-                </li>
-                <li>
-                    <span className="font-semibold">Preview & Proofread:</span> Always preview your emails and read through carefully before sending.
+                    <span className="font-semibold">Mini Lessons Hosted Landing Pages:</span>
+                    <ul className="list-disc pl-5 space-y-1 mt-1">
+                        <li>We'll provide dedicated landing pages for each of your courses.</li>
+                        <li>Easily accept payments directly through Mini Lessons-managed pages.</li>
+                        <li>Mini Lessons handles payment processing and distributes funds securely to you.</li>
+                    </ul>
                 </li>
             </ul>
 
+            <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
 
-            <TipBox label="Quick Tips">
+            <TipBox label="Quick Tips for Effective Hosting & Monetization">
                 <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
-                    <li>Start small: Begin with a shorter email series (3-4 emails) to test your audience's response, then gradually expand your campaign length as needed.</li>
-                    <li>Set clear goal metrics for each email campaign so you can easily track performance, identify areas to improve, and refine your approach for future success.</li>
+                    <li>
+                    Regularly review and adjust your course visibility settings based on your audience and promotional strategies.
+                    </li>
+                    <li>
+                    Preview your embedded course on your site to ensure optimal display and usability.
+                    </li>
+                    <li>
+                    Stay tuned for the monetization tools!
+                    </li>
                 </ul>
-            </TipBox>   
+            </TipBox>
 
         </div>
     </>

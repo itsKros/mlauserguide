@@ -34,6 +34,35 @@ const navData = [
     ],
   },
   {
+    label: "Course Creation",
+    path: "/course-creation",
+    icon: Layers,
+    sub: [
+      { label: "Using Course Creator", path: "/course-creation/course-creator" },
+      { label: "Using Course Editor", path: "/course-creation/course-editor" },
+      { label: "Adding Images & Multimedia", path: "/course-creation/adding-multimedia" },
+      { label: "One-Click Course Creator", path: "/course-creation/one-click-course-creator"},   
+      { label: "Exporting & Downloading Course", path: "/course-creation/exporting-downloading"},       
+    ],
+  },
+  {
+    label: "Book Creation",
+    path: "/book-creation",
+    icon: Book,
+    sub: [
+      { label: "Uisng Book Creator", path: "/book-creation/book-creator" },
+      { label: "Using Book Editor", path: "/book-creation/book-editor" },
+      { label: "Adding Images & Multimedia", path: "/course-creation/adding-multimedia" },
+      { label: "One-Click Book Creator", path: "/book-creation/one-click-book-creator"},   
+      { label: "Exporting & Downloading Book", path: "/book-creation/exporting-downloading"},       
+    ],
+  },
+  {
+    label: "Audiobook Creation",
+    path: "/audiobook-creation",
+    icon: Headphones,    
+  },
+  {
     label: "Andy AI",
     path: "/andy-ai",
     icon: Bot,    
@@ -53,6 +82,16 @@ const navData = [
     path: "/course-hosting",
     icon: Server,    
   },
+  {
+    label: "Spotlight",
+    path: "/spotlight",
+    icon: Star,    
+  },
+  {
+    label: "Support & Resource",
+    path: "/support-resource",
+    icon: HelpCircle,    
+  }
   
   
 ];

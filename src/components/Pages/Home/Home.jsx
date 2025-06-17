@@ -26,19 +26,19 @@ function Home() {
           icon: Layers,
           title: 'Course Creation',
           description: 'Build engaging, multimedia-rich courses from scratch or in one click.',
-          url: '#',
+          url: '/course-creation',
         },
         {
           icon: Book,
           title: 'Book Creation',
           description: 'Create interactive digital books using intuitive tools and templates.',
-          url: '#',
+          url: '/book-creation',
         },
         {
           icon: Headphones,
           title: 'Audiobook Creation',
           description: 'Convert your written content into professional-quality audiobooks.',
-          url: '#',
+          url: '/audiobook-creation',
         },
         {
           icon: Bot,
@@ -50,37 +50,31 @@ function Home() {
           icon: Image,
           title: 'Quiz & Media Management',
           description: 'Easily manage quizzes, images, and other media assets for your content.',
-          url: '#',
+          url: '/quiz-and-media-management',
         },
         {
           icon: Mail,
           title: 'Email Marketing',
           description: 'Design, export, and optimize email campaigns to reach your audience effectively.',
-          url: '#',
+          url: '/email-marketing',
         },
         {
           icon: Server,
           title: 'Course Hosting',
           description: 'Host and share your courses seamlessly, with embedding and monetization options.',
-          url: '#',
-        },
-        {
-          icon: Settings,
-          title: 'Administrative',
-          description: 'Manage your subscription, account settings, and personal profile.',
-          url: '#',
-        },
+          url: '/course-hosting',
+        },        
         {
           icon: Star,
           title: 'Customer Spotlight',
           description: 'Get featured and increase visibility by sharing your success story.',
-          url: '#',
+          url: '/spotlight',
         },
         {
           icon: HelpCircle,
           title: 'Support & Resources',
           description: 'Find help, book calls, or request custom solutions whenever you need support.',
-          url: '#',
+          url: '/support-resource',
         }
         
       ];
