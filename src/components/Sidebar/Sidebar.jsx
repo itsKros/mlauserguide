@@ -52,7 +52,7 @@ const navData = [
     sub: [
       { label: "Uisng Book Creator", path: "/book-creation/book-creator" },
       { label: "Using Book Editor", path: "/book-creation/book-editor" },
-      { label: "Adding Images & Multimedia", path: "/course-creation/adding-multimedia" },
+      { label: "Adding Images & Multimedia", path: "/book-creation/adding-multimedia" },
       { label: "One-Click Book Creator", path: "/book-creation/one-click-book-creator"},   
       { label: "Exporting & Downloading Book", path: "/book-creation/exporting-downloading"},       
     ],
