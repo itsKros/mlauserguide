@@ -18,7 +18,7 @@ function QuizMedia() {
             </p>
 
             <h2 className="text-xl font-bold text-[#7b1fa2]">Quiz Types Available</h2>
-            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+            <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                 <li>
                     <span className="font-semibold">Multiple Choice:</span> Provides a question with multiple selectable answers. Automatically graded in real-time.
                 </li>
@@ -37,7 +37,7 @@ function QuizMedia() {
             </ul>
 
             <h2 className="text-xl font-bold text-[#7b1fa2]">Quiz Types Available</h2>
-            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+            <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                 <li>
                     <span className="font-semibold">Click "Create Quiz":</span> Located at the top toolbar within your course/book editor.
                 </li>
@@ -59,13 +59,13 @@ function QuizMedia() {
             </div> 
 
             <h2 className="text-xl font-bold text-[#7b1fa2]">Interactive Grading:</h2>
-            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+            <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                 <li>Quizzes are auto-graded immediately, providing instant feedback.</li>
                 <li>Short answer responses are intelligently evaluated by Mini Lessons advanced AI, offering precise and relevant scoring.</li>
             </ul>
 
             <TipBox label="Quick Tips">
-                <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+                <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                     <li>Regularly include quizzes to boost learner retention and engagement.</li>
                     <li>Utilize diverse question types to create more engaging and effective learning experiences.</li>
                     <li>Quickly regenerate quizzes for fresh or alternative question sets.</li>
@@ -80,7 +80,7 @@ function QuizMedia() {
                 <img src="/imgs/quiz-media/qm-3.png" alt="Description" className="w-full md:w-3/5 h-auto p-6 shadow-sm rounded-md" />
             </div> 
             <h2 className="text-xl font-bold text-[#7b1fa2]">Steps to Generate Images:</h2>
-            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+            <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                 <li><span className="font-semibold">Navigate to Media Library:</span> Click “Media Library” from the top toolbar.</li>
                 <li><span className="font-semibold">Choose “Generate Image”:</span> Enter a descriptive prompt (e.g., "a sunny beach scene at sunset") to quickly produce high-quality visuals for your content.</li>
                 <li><span className="font-semibold">Preview & Save:</span> Review the generated image, then save it to your Media Library for easy reuse.</li>
@@ -94,14 +94,14 @@ function QuizMedia() {
                 <img src="/imgs/quiz-media/qm-4.png" alt="Description" className="w-full md:w-3/5 h-auto p-6 shadow-sm rounded-md" />
             </div> 
             <h2 className="text-xl font-bold text-[#7b1fa2]">Steps to Upload Images:</h2>
-            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+            <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                 <li><span className="font-semibold">Click "Upload Image":</span> Found in the toolbar or Media Library.</li>
                 <li><span className="font-semibold">Select Files from Your Device: </span> Browse your computer or mobile device and select images.</li>
                 <li><span className="font-semibold">Instant Access:</span> Uploaded images are automatically stored in your Media Library for convenient access and integration.</li>
             </ul>
 
             <TipBox label=" Quick Tips (Images & Multimedia):">
-                <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+                <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                     <li>Select clear, visually appealing images relevant to your content.</li>
                     <li>Use images consistently to reinforce key concepts and enhance learner understanding.</li>
                     <li>Regularly update visuals to maintain fresh, engaging content.</li>

@@ -16,7 +16,7 @@ function EmailMarketing() {
                     <img src="/imgs/email-marketing/em-1.png" alt="Description" className="w-full md:w-3/5 h-auto p-6 shadow-sm rounded-md" />
                 </div> 
 
-                <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+                <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                     <li>
                         <span className="font-semibold">Navigate to Your Course or Book Dashboard:</span> Click <span className="font-semibold">"Email Campaign"</span> to Start.
                     </li>
@@ -55,7 +55,7 @@ function EmailMarketing() {
                 <p>Easily transfer emails to your favorite email marketing software or email client:</p>
                 
 
-                <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+                <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                     <li>
                         Click the <span className="font-semibold">copy button</span> next to the subject or body of any email to quickly copy and paste your content into any external program (MailChimp, ActiveCampaign, Gmail, etc.).
                     </li>
@@ -73,7 +73,7 @@ function EmailMarketing() {
                 <p>Easily transfer emails to your favorite email marketing software or email client:</p>
                 
 
-                <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+                <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                     <li>
                         <span className="font-semibold">Consistency:</span> Send emails regularly to maintain audience engagement and build trust.
                     </li>
@@ -93,7 +93,7 @@ function EmailMarketing() {
 
 
                 <TipBox label="Quick Tips">
-                    <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+                    <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                         <li>Start small: Begin with a shorter email series (3-4 emails) to test your audience's response, then gradually expand your campaign length as needed.</li>
                         <li>Set clear goal metrics for each email campaign so you can easily track performance, identify areas to improve, and refine your approach for future success.</li>
                     </ul>

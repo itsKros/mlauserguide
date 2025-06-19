@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header/Header.jsx";
 import Sidebar from "./Sidebar/Sidebar.jsx";
 import Breadcrumbs from "./Breadcrumbs/Breadcrumbs.jsx";
+import NextPrevNavigation from "./NextPrevNavigation/NextPrevNavigation.jsx";
 import Footer from "./Footer/Footer.jsx";
 
 
@@ -48,7 +49,8 @@ export default function Layout() {
       >
         <Breadcrumbs />
         <div className="min-h-[calc(100vh-200px)] py-6">
-          <Outlet />          
+          <Outlet /> 
+          <NextPrevNavigation />         
         </div>
         <Footer />
       </main>

@@ -15,10 +15,10 @@ function CourseHosting() {
             <p className="text-gray-700">Mini Lessons offers simple but powerful tools to control how your course content is accessed:</p>
 
             <h2 className="text-xl font-bold text-[#7b1fa2]">Public vs. Private Visibility</h2>
-            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">            
+            <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">            
                 <li>
                 <h3 className="font-semibold">Easily transfer your generated content into external programs:</h3>                     
-                    <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+                    <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                         <li><span className="font-semibold">Public:</span> Anyone with the link can view your course instantly. Ideal for wide reach and marketing.</li>
                         <li><span className="font-semibold">Private:</span> Limit access strictly to authorized individuals, ensuring controlled and secure content distribution.</li>
                     </ul>
@@ -26,7 +26,7 @@ function CourseHosting() {
             </ul>
 
             <h2 className="text-xl font-bold text-[#7b1fa2]">Whitelisting (Coming Soon!)</h2>
-            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">            
+            <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">            
                 <li>Keep your courses private while giving access to specific individuals by email.</li>              
                 <li>Perfect for exclusive content, premium subscribers, or specific groups.</li>  
             </ul>
@@ -42,7 +42,7 @@ function CourseHosting() {
             <h2 className="text-2xl font-bold text-[#7b1fa2]">Embedding Courses on Your Website</h2>
             <p className="text-gray-700">Mini Lessons allows you to seamlessly embed your courses directly onto your own website, expanding your audience reach:</p>
 
-            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">            
+            <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">            
                 <li>Navigate to your course’s "Content Sharing & Embedding" section.</li>              
                 <li>Copy the provided <span className="font-semibold">iframe embed code.</span></li>  
                 <li>Simply paste this code into your website's HTML or CMS platform (like WordPress, Wix, Squarespace, etc.).</li>
@@ -56,7 +56,7 @@ function CourseHosting() {
             
             <h2 className="text-2xl font-bold text-[#7b1fa2]">Monetization & Payment Integration (Coming Soon – Currently Hidden)</h2>
             <p className="text-gray-700">Monetizing your courses through Mini Lessons is straightforward and flexible:</p>
-            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+            <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                 <li>
                     <span className="font-semibold">Stripe Integration:</span> Connect your existing Stripe account to Mini Lessons.
                     <ul className="list-disc pl-5 space-y-1 mt-1">
@@ -77,7 +77,7 @@ function CourseHosting() {
             <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
 
             <TipBox label="Quick Tips for Effective Hosting & Monetization">
-                <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+                <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                     <li>
                     Regularly review and adjust your course visibility settings based on your audience and promotional strategies.
                     </li>

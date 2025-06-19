@@ -12,7 +12,7 @@ function AndyAI() {
 
           <p className="text-md font-bold text-[#7b1fa2]">Andy Overview</p>
           <p className="text-gray-700">Andy provides specialized tools to streamline content creation and simplify your marketing:</p>   
-          <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+          <ul className="list-disc pl-5 space-y-2 mt-2 text-gray-800">
             <li>
               <span className="font-semibold">Product Research Assistant:</span> Deep market insights and analysis.
             </li>
@@ -76,7 +76,7 @@ function AndyAI() {
           <p className="text-md font-bold text-[#7b1fa2]">Andy's Modes & Versions</p>
           <p className="text-gray-700">Andy continuously improves and evolves to serve your business needs even better.</p>
           <p className="text-gray-700">Currently, Andy operates seamlessly across:</p>     
-          <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+          <ul className="list-disc pl-5 space-y-2 mt-2 text-gray-800">
             <li>
               <span className="font-semibold">Marketing & Copywriting Mode:</span> Expertly handles tasks such as SEO, ads, sales copy, emails, and social media.
             </li>
@@ -101,7 +101,7 @@ function AndyAI() {
           <p className="text-md font-bold text-[#7b1fa2]">Using Andy Effectively</p>
           <p className="text-gray-700">Getting the best from Andy is easy and intuitive—follow these simple steps to maximize your productivity:</p>
           
-          <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+          <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
             <li>
               <h3 className="font-semibold">Step 1: Select the Right Assistant</h3> 
               Expertly handles tasks such as SEO, ads, sales copy, emails, and social media.
@@ -120,7 +120,7 @@ function AndyAI() {
             <li>
               <h3 className="font-semibold">Step 4: Refine & Adjust Easily</h3> 
               If the initial response doesn’t fully meet your expectations:
-                <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+                <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                     <li>
                       Click <span className="font-semibold">"Clear & Ask Again"</span> to quickly generate a fresh response.
                     </li>
@@ -132,7 +132,7 @@ function AndyAI() {
             <li>
               <h3 className="font-semibold">Step 5: Copy & Use Your Results</h3> 
                 Easily transfer your generated content into external programs:
-                <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+                <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                     <li>Click the <span className="font-semibold">"Copy"</span> button to instantly copy Andy's output to your clipboard.</li>
                     <li>Paste this content into your favorite word processors, email platforms, or other marketing tools for immediate use.</li>
                 </ul>
@@ -144,7 +144,7 @@ function AndyAI() {
           </div> 
 
           <TipBox label="Quick Tips for Maximizing Andy’s Efficiency">
-              <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800" label="Quick Tips for Maximizing Andy’s Efficiency">
+              <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800" label="Quick Tips for Maximizing Andy’s Efficiency">
                   <li>
                       <span className="font-semibold">Be Precise: </span> Clearly specify details such as your audience, tone, or desired content length.
                   </li>

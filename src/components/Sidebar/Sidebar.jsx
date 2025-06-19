@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import {
   ChevronLeft,
-  ChevronRight,    
+  ChevronRight,
   House,
-  Rocket,  
+  Rocket,
   Layers,
   Book,
   Headphones,
@@ -30,7 +30,7 @@ const navData = [
     sub: [
       { label: "Introduction to Mini Lessons Academy", path: "/getting-started/introduction-to-mini-lessons-academy" },
       { label: "Onboarding", path: "/getting-started/onboarding" },
-      { label: "Dashboard Overview", path: "/getting-started/dashboard-overview" },      
+      { label: "Dashboard Overview", path: "/getting-started/dashboard-overview" },
     ],
   },
   {
@@ -41,8 +41,8 @@ const navData = [
       { label: "Using Course Creator", path: "/course-creation/course-creator" },
       { label: "Using Course Editor", path: "/course-creation/course-editor" },
       { label: "Adding Images & Multimedia", path: "/course-creation/adding-multimedia" },
-      { label: "One-Click Course Creator", path: "/course-creation/one-click-course-creator"},   
-      { label: "Exporting & Downloading Course", path: "/course-creation/exporting-downloading"},       
+      { label: "One-Click Course Creator", path: "/course-creation/one-click-course-creator" },
+      { label: "Exporting & Downloading Course", path: "/course-creation/exporting-downloading" },
     ],
   },
   {
@@ -53,59 +53,64 @@ const navData = [
       { label: "Uisng Book Creator", path: "/book-creation/book-creator" },
       { label: "Using Book Editor", path: "/book-creation/book-editor" },
       { label: "Adding Images & Multimedia", path: "/book-creation/adding-multimedia" },
-      { label: "One-Click Book Creator", path: "/book-creation/one-click-book-creator"},   
-      { label: "Exporting & Downloading Book", path: "/book-creation/exporting-downloading"},       
+      { label: "One-Click Book Creator", path: "/book-creation/one-click-book-creator" },
+      { label: "Exporting & Downloading Book", path: "/book-creation/exporting-downloading" },
     ],
   },
   {
     label: "Audiobook Creation",
     path: "/audiobook-creation",
-    icon: Headphones,    
+    icon: Headphones,
   },
   {
     label: "Andy AI",
     path: "/andy-ai",
-    icon: Bot,    
+    icon: Bot,
   },
   {
     label: "Quiz & Media Management",
     path: "/quiz-and-media-management",
-    icon: Image,    
+    icon: Image,
   },
   {
     label: "Email Marketing",
     path: "/email-marketing",
-    icon: Mail,    
+    icon: Mail,
   },
   {
     label: "Course Hosting",
     path: "/course-hosting",
-    icon: Server,    
+    icon: Server,
   },
   {
     label: "Spotlight",
     path: "/spotlight",
-    icon: Star,    
+    icon: Star,
   },
   {
     label: "Support & Resource",
     path: "/support-resource",
-    icon: HelpCircle,    
+    icon: HelpCircle,
   }
-  
-  
 ];
 
 export default function Sidebar({ collapsed, setCollapsed, isMobile }) {
   const { pathname } = useLocation();
   const [openSection, setOpenSection] = useState(null);
 
+  useEffect(() => {
+    // Automatically open the section containing the current route
+    const section = navData.find(item =>
+      item.sub?.some(subItem => subItem.path === pathname)
+    );
+    if (section) setOpenSection(section.label);
+  }, [pathname]);
+
   const toggleSection = (label) =>
     setOpenSection(openSection === label ? null : label);
 
   return (
     <>
-      {/* ---------- Sidebar ---------- */}
       <aside
         className={`bg-white fixed top-[60px] bottom-0 left-0 z-40 border-r border-gray-200 transition-all duration-300
           ${
@@ -119,7 +124,6 @@ export default function Sidebar({ collapsed, setCollapsed, isMobile }) {
           }
           overflow-y-auto flex flex-col justify-between`}
       >
-        {/* Navigation header + collapse button */}
         <div>
           <div className="flex items-center justify-between mb-4">
             {!collapsed && (
@@ -136,7 +140,6 @@ export default function Sidebar({ collapsed, setCollapsed, isMobile }) {
             )}
           </div>
 
-          {/* Main links */}
           {!collapsed &&
             navData.map(({ label, path, sub, icon: Icon }) => (
               <div key={label}>
@@ -182,11 +185,9 @@ export default function Sidebar({ collapsed, setCollapsed, isMobile }) {
             ))}
         </div>
 
-        {/* Reserved space for bottom actions if needed */}
         <div className="mt-auto" />
       </aside>
 
-      {/* ---------- Dark overlay (mobile only) ---------- */}
       {isMobile && !collapsed && (
         <div
           className="fixed inset-0 top-[60px] bg-black/40 z-30 transition-opacity duration-300"

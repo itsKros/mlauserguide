@@ -16,7 +16,7 @@ function SupportResource() {
 
             <p className="text-gray-700">Need assistance? We’re always just a message away:</p>
 
-            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+            <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                 <li>
                     <h3 className="font-semibold">Direct Email: </h3> 
                     Quickly reach our dedicated support team at: <a className="text-[#7b1fa2]" href="mail:support@minilessonsacademy.com" >support@minilessonsacademy.com</a>
@@ -39,7 +39,7 @@ function SupportResource() {
             <h2 className="text-2xl font-bold text-[#7b1fa2]">Custom Solutions</h2>
             <p className="text-gray-700">Sometimes, your business needs might call for a tailored approach. We offer enterprise-level and custom solutions specifically designed for organizations and unique projects.</p>
 
-            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+            <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                 <li>
                     <h3 className="font-semibold">Custom Done-for-You Solutions:</h3> 
                     From time to time, we provide specialized solutions for businesses requiring hands-on, tailored support.
@@ -59,7 +59,7 @@ function SupportResource() {
             <p className="text-gray-700">Find quick answers to common questions about Mini Lessons Academy below:</p>
 
             
-            <div className="space-y-4 text-sm text-gray-800 mt-4">
+            <div className="space-y-4 text-md text-gray-800 mt-4">
                 <div>
                     <p><span className="font-semibold">Q:</span> <span className="font-semibold">Can anyone create a course with Mini Lessons, even without experience?</span></p>
                     <p><span className="font-semibold">A:</span> Absolutely! Mini Lessons simplifies course creation for everyone, whether you’re a complete beginner or a seasoned professional.</p>
@@ -104,7 +104,7 @@ function SupportResource() {
                 <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
 
                 <TipBox label="Quick Tips for Getting Help Quickly">
-                    <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+                    <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                         <li>Check FAQs first for immediate answers.</li>
                         <li>Clearly detail your issue when contacting support to ensure swift resolution.</li>
                         <li>Book a strategy call for personalized guidance tailored to your needs.</li>

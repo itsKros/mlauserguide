@@ -15,7 +15,7 @@ function Spotlight() {
 
             <p className="text-gray-700">We want to feature you! Here’s how you can submit your course, book, or success story:</p>
 
-            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+            <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                 <li>
                     <h3 className="font-semibold">Tell Us Your Story</h3> 
                     Share how Mini Lessons helped you create impactful courses or compelling books. Include what makes your content unique or particularly successful.
@@ -49,7 +49,7 @@ function Spotlight() {
 
             <p className="text-gray-700">Being featured on Mini Lessons Spotlight can elevate your visibility and credibility:</p>
 
-            <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+            <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                 <li>
                     <span className="font-semibold">Increased Exposure:</span> Gain exposure on our website, newsletters, social media channels, and more.
                 </li>
@@ -65,7 +65,7 @@ function Spotlight() {
             </ul>            
 
             <TipBox label="Quick Tips for a Great Spotlight Submission">
-                <ul className="list-disc pl-5 space-y-2 mt-2 text-sm text-gray-800">
+                <ul className="list-disc pl-5 space-y-2 mt-2 text-md text-gray-800">
                     <li>Clearly highlight your success and unique aspects of your content.</li>
                     <li>Include numbers or concrete results to illustrate your achievements.</li>
                     <li>Use high-quality visuals and testimonials to reinforce your story.</li>
