@@ -1,5 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+
+
 import Layout from './components/Layout.jsx';
 
 import Home from './components/Pages/Home/Home.jsx';
@@ -31,6 +33,9 @@ import EmailMarketing from './components/Pages/EmailMarketing/EmailMarketing.jsx
 import CourseHosting from './components/Pages/CourseHosting/CourseHosting.jsx';
 import Spotlight from './components/Pages/Spotlight/Spotlight.jsx';
 import SupportResource from './components/Pages/SupportResource/SupportResource.jsx';
+
+
+
 
 
 export default function App() {

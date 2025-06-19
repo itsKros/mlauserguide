@@ -1,16 +1,25 @@
+// Header.jsx
 import React from "react";
 import { Menu } from "lucide-react";
+import SearchComponent from "../SearchComponent/SearchComponent";
 
 function Header({ collapsed, setCollapsed, isMobile }) {
   return (
-    <header className="fixed top-0 left-0 right-0 h-[60px] bg-[#7b1fa2] text-white flex items-center justify-between px-4 z-50 shadow">
-      <a href="/"><img src="/mla_logo.webp" alt="Logo" className="h-8 sm:h-10 w-auto" /> </a>
-      <h1 className="text-lg font-bold">Documentation</h1>
+    <header className="fixed top-0 left-0 right-0 h-[60px] bg-[#7b1fa2] text-white flex items-center justify-between px-4 z-50 shadow gap-4">
+      <a href="/" className="flex-shrink-0">
+        <img src="/mla_logo.webp" alt="Logo" className="h-8 sm:h-10 w-auto" />
+      </a>
+
+      <h1 className="text-lg font-bold whitespace-nowrap">Documentation</h1>
+
+      <div className="flex-1 max-w-md ml-4 hidden sm:block">
+        <SearchComponent />
+      </div>
 
       {isMobile && (
         <button
           onClick={() => setCollapsed(!collapsed)}
-          className="text-white z-50"
+          className="text-white z-50 ml-4"
           aria-label="Toggle navigation"
         >
           <Menu />
