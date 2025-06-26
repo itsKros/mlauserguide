@@ -24,16 +24,12 @@ function Header({ collapsed, setCollapsed, isMobile, setShowMobileSearch }) {
         <img src="/mla_logo.webp" alt="Logo" className="h-8 sm:h-10 w-auto" />
       </a>
 
-      <h1 className="text-lg font-bold whitespace-nowrap">{currentTitle}</h1>
+      <h1 className="text-lg font-bold truncate whitespace-nowrap overflow-hidden max-w-[50vw] sm:max-w-[60%]">{currentTitle}</h1>
 
       {/* Desktop Search Box */}
-      {/* <div className="flex-1 max-w-md ml-4 hidden sm:block ml-auto">
-        <SearchComponent />
-      </div> */}
-
       <div className="hidden sm:block flex-1 max-w-md ml-auto">
-  <SearchComponent />
-</div>
+        <SearchComponent />
+      </div>
 
       {/* Mobile Controls */}
       {isMobile && (
