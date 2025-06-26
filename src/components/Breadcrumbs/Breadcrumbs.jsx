@@ -2,10 +2,6 @@ import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 
-function capitalize(word) {
-  return word.charAt(0).toUpperCase() + word.slice(1);
-}
-
 function formatBreadcrumb(text) {
   return text
     .split('-')
@@ -13,28 +9,35 @@ function formatBreadcrumb(text) {
     .join(' ');
 }
 
-
-
-function Breadcrumbs() {
+export default function Breadcrumbs({ textSize = 'text-base sm:text-lg' }) {
   const location = useLocation();
-  const pathnames = location.pathname.split('/').filter((x) => x);
+  const pathnames = location.pathname.split('/').filter(Boolean);
 
   return (
-    <nav className="text-sm mt-4 mb-4 text-gray-700 flex items-center space-x-1 overflow-x-auto whitespace-nowrap scrollbar-hide">
-    <Link to="/" className="hover:bg-gray-100 px-2 py-1 rounded text-[#7b1fa2] font-medium">Home</Link>
-    {pathnames.map((value, index) => {
-      const to = `/${pathnames.slice(0, index + 1).join('/')}`;
-      return (
-        <React.Fragment key={to}>
-          <ChevronRight className="w-4 h-4 text-gray-400" />
-          <Link to={to} className="hover:bg-gray-100 px-2 py-1 rounded text-[#7b1fa2] font-medium">
-            {formatBreadcrumb(value)}
-          </Link>
-        </React.Fragment>
-      );
-    })}
-  </nav>
+    <nav
+      className={`mt-4 mb-6 text-gray-700 flex items-center flex-wrap space-x-1 overflow-x-auto whitespace-nowrap scrollbar-hide ${textSize}`}
+    >
+      <Link
+        to="/"
+        className="hover:bg-gray-100 px-2 py-1 rounded text-[#7b1fa2] font-semibold"
+      >
+        Home
+      </Link>
+
+      {pathnames.map((segment, index) => {
+        const to = `/${pathnames.slice(0, index + 1).join('/')}`;
+        return (
+          <React.Fragment key={to}>
+            <ChevronRight className="w-5 h-5 text-gray-400 mx-1 flex-shrink-0" />
+            <Link
+              to={to}
+              className="hover:bg-gray-100 px-2 py-1 rounded text-[#7b1fa2] font-semibold"
+            >
+              {formatBreadcrumb(segment)}
+            </Link>
+          </React.Fragment>
+        );
+      })}
+    </nav>
   );
 }
-
-export default Breadcrumbs;

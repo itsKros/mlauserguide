@@ -46,7 +46,7 @@ function CustomHits() {
   if (!results || results.nbHits === 0) return null;
 
   return (
-    <div className="absolute top-full mt-2 w-full bg-white shadow-xl border rounded-md z-50 max-h-[300px] overflow-y-auto">
+    <div className="absolute top-full mt-2 w-full bg-white shadow-xl border border-gray-200 rounded-md z-50 max-h-[300px] overflow-y-auto">
       <Hits hitComponent={Hit} />
     </div>
   );
