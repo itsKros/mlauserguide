@@ -1,5 +1,5 @@
 // Sidebar.jsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import {
   ChevronLeft,
@@ -18,26 +18,16 @@ import {
 } from "lucide-react";
 
 const navData = [
+  { label: "Home", path: "/", icon: House },
   {
-    label: "Home",
-    path: "/",
-    icon: House,
-  },
-  {
-    label: "Getting Started",
-    path: "/getting-started",
-    icon: Rocket,
-    sub: [
+    label: "Getting Started", path: "/getting-started", icon: Rocket, sub: [
       { label: "Introduction to Mini Lessons Academy", path: "/getting-started/introduction-to-mini-lessons-academy" },
       { label: "Onboarding", path: "/getting-started/onboarding" },
       { label: "Dashboard Overview", path: "/getting-started/dashboard-overview" },
     ],
   },
   {
-    label: "Course Creation",
-    path: "/course-creation",
-    icon: Layers,
-    sub: [
+    label: "Course Creation", path: "/course-creation", icon: Layers, sub: [
       { label: "Using Course Creator", path: "/course-creation/course-creator" },
       { label: "Using Course Editor", path: "/course-creation/course-editor" },
       { label: "Adding Images & Multimedia", path: "/course-creation/adding-multimedia" },
@@ -46,10 +36,7 @@ const navData = [
     ],
   },
   {
-    label: "Book Creation",
-    path: "/book-creation",
-    icon: Book,
-    sub: [
+    label: "Book Creation", path: "/book-creation", icon: Book, sub: [
       { label: "Using Book Creator", path: "/book-creation/book-creator" },
       { label: "Using Book Editor", path: "/book-creation/book-editor" },
       { label: "Adding Images & Multimedia", path: "/book-creation/adding-multimedia" },
@@ -57,72 +44,66 @@ const navData = [
       { label: "Exporting & Downloading Book", path: "/book-creation/exporting-downloading" },
     ],
   },
-  {
-    label: "Audiobook Creation",
-    path: "/audiobook-creation",
-    icon: Headphones,
-  },
-  {
-    label: "Andy AI",
-    path: "/andy-ai",
-    icon: Bot,
-  },
-  {
-    label: "Quiz & Media Management",
-    path: "/quiz-and-media-management",
-    icon: Image,
-  },
-  {
-    label: "Email Marketing",
-    path: "/email-marketing",
-    icon: Mail,
-  },
-  {
-    label: "Course Hosting",
-    path: "/course-hosting",
-    icon: Server,
-  },
-  {
-    label: "Spotlight",
-    path: "/spotlight",
-    icon: Star,
-  },
-  {
-    label: "Support & Resource",
-    path: "/support-resource",
-    icon: HelpCircle,
-  }
+  { label: "Audiobook Creation", path: "/audiobook-creation", icon: Headphones },
+  { label: "Andy AI", path: "/andy-ai", icon: Bot },
+  { label: "Quiz & Media Management", path: "/quiz-and-media-management", icon: Image },
+  { label: "Email Marketing", path: "/email-marketing", icon: Mail },
+  { label: "Course Hosting", path: "/course-hosting", icon: Server },
+  { label: "Spotlight", path: "/spotlight", icon: Star },
+  { label: "Support & Resource", path: "/support-resource", icon: HelpCircle },
 ];
 
 export default function Sidebar({ collapsed, setCollapsed, isMobile }) {
   const { pathname } = useLocation();
   const [openSection, setOpenSection] = useState(null);
-  const [hasMounted, setHasMounted] = useState(false);
+  const sidebarRef = useRef(null);
 
+  // Initial collapsed state based on screen size
   useEffect(() => {
     const handleResize = () => {
-      const isNowMobile = window.innerWidth < 768;
-      setCollapsed(isNowMobile);
+      setCollapsed(window.innerWidth < 768);
     };
-
     handleResize();
-    setHasMounted(true);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [setCollapsed]);
 
+  // Auto-expand section matching current path
   useEffect(() => {
-    const section = navData.find(item =>
-      item.sub?.some(subItem => subItem.path === pathname)
+    const matchedSection = navData.find(item =>
+      pathname.startsWith(item.path) && item.sub
     );
-    if (section) setOpenSection(section.label);
+    setOpenSection(matchedSection?.label || null);
   }, [pathname]);
+
+  // Scroll to active item in mobile
+useEffect(() => {
+  if (!isMobile || collapsed || !sidebarRef.current) return;
+
+  const timeout = setTimeout(() => {
+    const activeLink = sidebarRef.current.querySelector(".bg-\\[\\#7b1fa2\\]");
+    if (activeLink) {
+      activeLink.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, 100); // delay to allow sidebar transition
+
+  return () => clearTimeout(timeout);
+}, [collapsed, isMobile]);
+
+  const handleClick = (label, hasSub) => {
+    if (hasSub) {
+      setOpenSection(prev => (prev === label ? null : label));
+    } else {
+      setOpenSection(null);
+    }
+    if (isMobile) setCollapsed(true);
+  };
 
   return (
     <>
       <aside
-        className={`bg-white fixed top-[60px] bottom-0 left-0 z-40 border-r border-gray-200
-          ${hasMounted ? 'transition-all duration-300' : ''}
+        ref={sidebarRef}
+        className={`bg-white fixed top-[60px] bottom-0 left-0 z-40 border-r border-gray-200 transition-all duration-300
           ${
             isMobile
               ? collapsed
@@ -136,14 +117,12 @@ export default function Sidebar({ collapsed, setCollapsed, isMobile }) {
       >
         <div>
           <div className="flex items-center justify-between mb-4">
-            {!collapsed && (
-              <span className="font-semibold text-[#7b1fa2]">Navigation</span>
-            )}
+            {!collapsed && <span className="font-semibold text-[#7b1fa2]">Navigation</span>}
             {!isMobile && (
               <button
                 onClick={() => setCollapsed(!collapsed)}
-                className="text-gray-500 hover:text-[#7b1fa2] transition-transform duration-300 cursor-pointer"
-                aria-label="Collapse sidebar"
+                className="text-gray-500 hover:text-[#7b1fa2]"
+                aria-label="Toggle sidebar"
               >
                 {collapsed ? <ChevronRight /> : <ChevronLeft />}
               </button>
@@ -155,36 +134,28 @@ export default function Sidebar({ collapsed, setCollapsed, isMobile }) {
               <div key={label}>
                 <NavLink
                   to={path}
-                  onClick={() => {
-                    if (sub) setOpenSection(openSection === label ? null : label);
-                    if (isMobile) setCollapsed(true);
-                  }}
+                  onClick={() => handleClick(label, !!sub)}
                   className={({ isActive }) =>
                     `flex items-center gap-2 my-2 px-3 py-2 rounded ${
-                      isActive
-                        ? "bg-[#7b1fa2] text-white"
-                        : "text-[#7b1fa2] hover:bg-gray-100"
+                      isActive ? "bg-[#7b1fa2] text-white" : "text-[#7b1fa2] hover:bg-gray-100"
                     }`
                   }
                 >
                   <Icon className="w-4 h-4" />
                   <span>{label}</span>
                 </NavLink>
-
                 {openSection === label && sub && (
                   <div className="pl-6">
                     {sub.map(({ label, path }) => (
                       <NavLink
                         key={label}
                         to={path}
+                        onClick={() => isMobile && setCollapsed(true)}
                         className={({ isActive }) =>
                           `block my-1 px-2 py-1 text-sm rounded ${
-                            isActive
-                              ? "text-[#7b1fa2] font-semibold"
-                              : "text-gray-700 hover:bg-gray-100"
+                            isActive ? "text-[#7b1fa2] font-semibold" : "text-gray-700 hover:bg-gray-100"
                           }`
                         }
-                        onClick={() => isMobile && setCollapsed(true)}
                       >
                         {label}
                       </NavLink>
@@ -194,13 +165,11 @@ export default function Sidebar({ collapsed, setCollapsed, isMobile }) {
               </div>
             ))}
         </div>
-
-        <div className="mt-auto" />
       </aside>
 
       {isMobile && !collapsed && (
         <div
-          className="fixed inset-0 top-[60px] bg-black/40 z-30 transition-opacity duration-300"
+          className="fixed inset-0 top-[60px] bg-black/40 z-30"
           onClick={() => setCollapsed(true)}
         />
       )}
