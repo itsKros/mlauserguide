@@ -1,3 +1,4 @@
+// Sidebar.jsx
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import {
@@ -12,7 +13,6 @@ import {
   Image,
   Mail,
   Server,
-  Settings,
   Star,
   HelpCircle,
 } from "lucide-react";
@@ -50,7 +50,7 @@ const navData = [
     path: "/book-creation",
     icon: Book,
     sub: [
-      { label: "Uisng Book Creator", path: "/book-creation/book-creator" },
+      { label: "Using Book Creator", path: "/book-creation/book-creator" },
       { label: "Using Book Editor", path: "/book-creation/book-editor" },
       { label: "Adding Images & Multimedia", path: "/book-creation/adding-multimedia" },
       { label: "One-Click Book Creator", path: "/book-creation/one-click-book-creator" },
@@ -97,22 +97,32 @@ const navData = [
 export default function Sidebar({ collapsed, setCollapsed, isMobile }) {
   const { pathname } = useLocation();
   const [openSection, setOpenSection] = useState(null);
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
-    // Automatically open the section containing the current route
+    const handleResize = () => {
+      const isNowMobile = window.innerWidth < 768;
+      setCollapsed(isNowMobile);
+    };
+
+    handleResize();
+    setHasMounted(true);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [setCollapsed]);
+
+  useEffect(() => {
     const section = navData.find(item =>
       item.sub?.some(subItem => subItem.path === pathname)
     );
     if (section) setOpenSection(section.label);
   }, [pathname]);
 
-  const toggleSection = (label) =>
-    setOpenSection(openSection === label ? null : label);
-
   return (
     <>
       <aside
-        className={`bg-white fixed top-[60px] bottom-0 left-0 z-40 border-r border-gray-200 transition-all duration-300
+        className={`bg-white fixed top-[60px] bottom-0 left-0 z-40 border-r border-gray-200
+          ${hasMounted ? 'transition-all duration-300' : ''}
           ${
             isMobile
               ? collapsed
@@ -146,7 +156,7 @@ export default function Sidebar({ collapsed, setCollapsed, isMobile }) {
                 <NavLink
                   to={path}
                   onClick={() => {
-                    if (sub) toggleSection(label);
+                    if (sub) setOpenSection(openSection === label ? null : label);
                     if (isMobile) setCollapsed(true);
                   }}
                   className={({ isActive }) =>

@@ -1,5 +1,6 @@
 import React from 'react'
 import TipBox from '../../TipBox/TipBox'
+import { Link } from "react-router-dom";
 
 function CourseCreation() {
   const features = [
@@ -43,16 +44,14 @@ function CourseCreation() {
 
         
         
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-        </section>
+
 
 
         <ul className="list-none space-y-4 pl-4 border-l-2 border-[#7b1fa2]">
             {features.map((item, index) => (
                 <li key={index} className="pl-4">
                   <h3 className="text-md font-semibold text-[#7b1fa2]">
-                    <a href={item.url}>{item.title}</a>
+                    <Link to={item.url}>{item.title}</Link>
                   </h3>               
                 </li>
             ))}

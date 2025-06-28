@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import {
   BookOpen,
   Rocket,
@@ -97,7 +98,7 @@ function Home() {
     
             <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((item, idx) => (
-                <a href={item.url}
+                <Link to={item.url}
                   key={idx}
                   className="bg-white border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition group"
                 >
@@ -106,7 +107,7 @@ function Home() {
                     <h3 className="text-lg font-semibold text-[#7b1fa2]">{item.title}</h3>
                   </div>
                   <p className="text-gray-600 text-sm">{item.description}</p>
-                </a>
+                </Link>
               ))}
             </section>
           </div>

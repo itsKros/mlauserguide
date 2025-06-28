@@ -14,18 +14,34 @@ export default function Layout() {
   const [showMobileSearch, setShowMobileSearch] = useState(false);
   const location = useLocation();
 
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     const mobile = window.innerWidth < 768;
+  //     setIsMobile(mobile);
+  //     setCollapsed(mobile);
+  //   };
+
+  //   window.addEventListener('resize', handleResize);
+  //   handleResize();
+
+  //   return () => window.removeEventListener('resize', handleResize);
+  // }, []);
+
   useEffect(() => {
-    const handleResize = () => {
-      const mobile = window.innerWidth < 768;
-      setIsMobile(mobile);
-      setCollapsed(mobile);
-    };
+  const handleResize = () => {
+    const mobile = window.innerWidth < 768;
+    setIsMobile(mobile);
 
-    window.addEventListener('resize', handleResize);
-    handleResize();
+    // Only auto-collapse if becoming mobile for the first time
+    setCollapsed(prev => (mobile ? true : prev));
+  };
 
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  window.addEventListener('resize', handleResize);
+  handleResize();
+
+  return () => window.removeEventListener('resize', handleResize);
+}, []);
+
 
   useEffect(() => {
     // Scroll to top on navigation

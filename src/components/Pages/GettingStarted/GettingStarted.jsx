@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import { BookOpen, Settings, Rocket } from 'lucide-react';
 
 function GettingStarted() {
@@ -46,7 +47,7 @@ function GettingStarted() {
             {features.map((item, index) => (
                 <li key={index} className="pl-4">
                   <h3 className="text-md font-semibold text-[#7b1fa2]">
-                    <a href={item.url}>{item.title}</a>
+                    <Link to={item.url}>{item.title}</Link>
                   </h3>               
                 </li>
             ))}
